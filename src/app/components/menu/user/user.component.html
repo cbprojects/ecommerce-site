@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <div class="main-panel">
+        <!-- HEADER -->
+        <app-header></app-header>
+        <!-- HEADER -->
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card">
+                            <div class="header display-flex">
+                                <div class="icon-big icon-warning text-center">
+                                    <i class="ti-tag"></i>
+                                </div>
+                                <div class="p-2 m-1">
+                                    <h4 class="title">{{title}} - {{msg.lbl_menu_consulta}}</h4>
+                                    <p class="category">{{subtitle}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card">
+                            <div class="content">
+                                <app-user-query></app-user-query>
+                                <div class="footer">
+                                    <hr />
+                                    <div class="stats">
+                                        <i class="ti-reload"></i> Updated now
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT -->
+
+        <!-- FOOTER -->
+        <app-footer></app-footer>
+        <!-- FOOTER -->
+    </div>
+</div>

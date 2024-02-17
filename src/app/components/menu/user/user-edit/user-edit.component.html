@@ -1,0 +1,76 @@
+<div *ngIf="user" class="card">
+    <div class="content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-2">
+                <div class="form-group">
+                    <label>{{msg.lbl_forms_id}}</label>
+                    <input type="text" class="form-control border-input" disabled placeholder="{{msg.lbl_forms_id}}"
+                        [(ngModel)]="user._id">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="form-group">
+                    <label>{{msg.lbl_forms_name}}</label>
+                    <input type="text" class="form-control border-input" placeholder="{{msg.lbl_forms_name}}"
+                        [(ngModel)]="user.name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="form-group">
+                    <label>{{msg.lbl_forms_last_name}}</label>
+                    <input type="text" class="form-control border-input" placeholder="{{msg.lbl_forms_last_name}}"
+                        [(ngModel)]="user.lastName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="form-group">
+                    <label>{{msg.lbl_forms_email}}</label>
+                    <input type="text" class="form-control border-input" autocomplete="off" placeholder="{{msg.lbl_forms_email}}"
+                        [(ngModel)]="user.mail">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="form-group">
+                    <label>{{msg.lbl_forms_password}}</label>
+                    <input type="password" class="form-control border-input" autocomplete="off" placeholder="{{msg.lbl_forms_password}}"
+                        [(ngModel)]="user.password">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="form-group">
+                    <label>{{msg.lbl_forms_confirm_password}}</label>
+                    <input type="password" class="form-control border-input"
+                        placeholder="{{msg.lbl_forms_confirm_password}}" [(ngModel)]="confirmPassword">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <label>
+                        <p-checkbox [(ngModel)]="user.receiveNewsletter" [binary]="true" inputId="binary"></p-checkbox>
+                        Recibir Newsletter
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex justify-content-center">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 text-center">
+                <div class="m-3 pt-1">
+                    <p-button (click)="save()" class="w100" [disabled]="user.password !== confirmPassword"
+                        label="{{phase === phaseCreate ? msg.lbl_btn_crear : msg.lbl_btn_editar}}"
+                        icon="pi pi-save"></p-button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p-messages></p-messages>
+            </div>
+        </div>
+    </div>
+</div>
