@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
     request.expirationDate = new Date();
     request.expirationDate.setFullYear(request.registerDate.getFullYear() + 1);
     request.currency = "USD";
-    request.value = type === 0 ? 9.99 : 90;
+    request.value = type === 0 ? 999.00 : 9000.00
     request.type = type;
 
     return request;
@@ -136,7 +136,7 @@ export class HomeComponent implements OnInit {
       request.paymentDate = new Date();
       request.currency = "USD";
       request.subscription = this.subscription;
-      request.value = this.subscription.type === 0 ? 9.99 : 90;
+      request.value = this.subscription.type === 0 ? 999.00 : 9000.00;
     }
 
     return request;

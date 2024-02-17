@@ -78,7 +78,7 @@
 												[disabled]="subscription !== undefined" (click)="suscribirse(0)"
 												class="w100" label="Suscribirse" icon="pi pi-plus"></p-button>
 											<p *ngIf="subscription && subscription.type===0">Pagar antes de:
-												{{subscription?.expirationDate}}</p>
+												{{subscription.expirationDate | date:'yyyy-MM-dd HH:mm'}}</p>
 											<p-button *ngIf="subscription && subscription.type===0" (click)="irAPagar()"
 												class="w100" label="Pagar" icon="pi pi-wallet"></p-button>
 										</div>
@@ -117,7 +117,7 @@
 												[disabled]="subscription !== undefined" (click)="suscribirse(1)"
 												class="w100" label="Suscribirse" icon="pi pi-plus"></p-button>
 											<p *ngIf="subscription && subscription.type===1">Pagar antes de:
-												{{subscription?.expirationDate}}</p>
+												{{subscription.expirationDate | date:'yyyy-MM-dd HH:mm'}}</p>
 											<p-button *ngIf="subscription && subscription.type===1" (click)="irAPagar()"
 												class="w100" label="Pagar" icon="pi pi-wallet"></p-button>
 										</div>
